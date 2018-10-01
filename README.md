@@ -5,17 +5,20 @@ Official implementation of **Temporal and Volumetric Denoising via Quantile Spar
 ## Getting started
 
 ### Store your data
-First, store all your images or volumes in the data folder. 
+First, store all your images or volumes in the data folder. Each dataset should be stored in indivudual folders, as the framework automatically reads all images or volumes in the denoted input folder in the evaluation script.
 
-### Set the parameter
+### Set the parameters
 If you wish to adjust the parameter, modify the init files. 
 
 ### Start your evaluation
-State the input and ouput folders in the evaluation scripts as well as the name of the output file. You can adjust the mode of the framework 
+State the input and ouput folders in the evaluation scripts as well as the name of the output file. You can change the mode of the framework to
 
 * '2d' : denotes image denoising
 * '3d' : denotes volumetric denoising
 * '3dt': denotes volumetric+temporal denoising
+
+if you want to evaluate the value of the objective function in each iteration step, create a new variable in runEvaluation that stores the second output of the framework (e.g. [f,E] = feval(sprintf('admm%s',mode),g,lambda,mu,omega,alpha,beta,gamma,tol,T_outer,T_inner,patchsize,p);) 
+
 
 
 ## Citation
