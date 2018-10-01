@@ -1,7 +1,22 @@
 # Temporal and Volumetric Denoising via Quantile Sparse Image Prior
 
 Official implementation of **Temporal and Volumetric Denoising via Quantile Sparse Image Prior** including evaluation scripts.
-The code will be uploaded by the end of September.
+
+## Getting started
+
+### Store your data
+First, store all your images or volumes in the data folder. 
+
+### Set the parameter
+If you wish to adjust the parameter, modify the init files. 
+
+### Start your evaluation
+State the input and ouput folders in the evaluation scripts as well as the name of the output file. You can adjust the mode of the framework 
+
+* '2d' : denotes image denoising
+* '3d' : denotes volumetric denoising
+* '3dt': denotes volumetric+temporal denoising
+
 
 ## Citation
 
