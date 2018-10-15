@@ -17,8 +17,11 @@ State the input and ouput folders in the evaluation scripts as well as the name 
 * '3d' : denotes volumetric denoising
 * '3dt': denotes volumetric+temporal denoising
 
-if you want to evaluate the value of the objective function in each iteration step, create a new variable in runEvaluation that stores the second output of the framework (e.g. [f,E] = feval(sprintf('admm%s',mode),g,lambda,mu,omega,alpha,beta,gamma,tol,T_outer,T_inner,patchsize,p);) 
+If you want to evaluate the value of the objective function in each iteration step, create a new variable in runEvaluation that stores the second output of the framework (e.g. [f,E] = feval(sprintf('admm%s',mode),g,lambda,mu,omega,alpha,beta,gamma,tol,T_outer,T_inner,patchsize,p);) 
 
+## Remarks
+You might have to run the following command line in MATLAB in case you use Linux or iOS:
+mex nth_element.cpp
 
 
 ## Citation
